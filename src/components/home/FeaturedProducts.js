@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import airplaneImage from "../../assets/images/airplane-image.jpg";
 import flexImage from "../../assets/images/flex-image.jpg";
 import winImage from "../../assets/images/win-image.jpg";
-
 function FeaturedProducts() {
   return (
     <section className="product-section pb-5">
@@ -22,7 +22,7 @@ function FeaturedProducts() {
               <div className="card-body">
                 <h5>World’s 1st Organic Soy Lecithin</h5>
                 <p>Estee Lauder’s brand, Origins, launched in 1990...</p>
-                <a href="#" className="btn btn-add-cart w-100">Add to Cart</a>
+                <Link to={`/product/${product.slug}`} className="btn btn-add-cart w-100">Add to Cart</Link>
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@ function FeaturedProducts() {
               <div className="card-body">
                 <h5>ANP in a joint venture with Solazyme</h5>
                 <p>San Francisco’s Solazyme provided algal biofuel...</p>
-                <a href="#" className="btn btn-add-cart w-100">Add to Cart</a>
+                <Link to={`/product/${product.slug}`} className="btn btn-add-cart w-100">Add to Cart</Link>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ function FeaturedProducts() {
               <div className="card-body">
                 <h5>Iowa’s First Flax Processing Plant</h5>
                 <p>Spectrum Organic Products made a commitment...</p>
-                <a href="#" className="btn btn-add-cart w-100">Add to Cart</a>
+                <Link to={`/product/${product.slug}`} className="btn btn-add-cart w-100">Add to Cart</Link>
               </div>
             </div>
           </div>
