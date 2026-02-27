@@ -1,0 +1,44 @@
+<svg width="60mm" height="250mm" viewBox="0 0 60 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="60" height="250" fill="white"/>
+ 
+  <!-- repeating decorative pattern -->
+  <g fill="none" stroke="black" stroke-width="2">
+    <rect x="5" y="5" width="50" height="240" rx="2"/>
+ 
+    <!-- repeat design -->
+    <g transform="translate(30,25)">
+      <circle r="6"/>
+      <path d="M0 -14 L8 -6 L0 2 L-8 -6 Z"/>
+    </g>
+ 
+    <g transform="translate(30,55)">
+      <circle r="6"/>
+      <path d="M0 -14 L8 -6 L0 2 L-8 -6 Z"/>
+    </g>
+ 
+    <g transform="translate(30,85)">
+      <circle r="6"/>
+      <path d="M0 -14 L8 -6 L0 2 L-8 -6 Z"/>
+    </g>
+ 
+    <g transform="translate(30,115)">
+      <circle r="6"/>
+      <path d="M0 -14 L8 -6 L0 2 L-8 -6 Z"/>
+    </g>
+ 
+    <g transform="translate(30,145)">
+      <circle r="6"/>
+      <path d="M0 -14 L8 -6 L0 2 L-8 -6 Z"/>
+    </g>
+ 
+    <g transform="translate(30,175)">
+      <circle r="6"/>
+      <path d="M0 -14 L8 -6 L0 2 L-8 -6 Z"/>
+    </g>
+ 
+    <g transform="translate(30,205)">
+      <circle r="6"/>
+      <path d="M0 -14 L8 -6 L0 2 L-8 -6 Z"/>
+    </g>
+  </g>
+</svg>
