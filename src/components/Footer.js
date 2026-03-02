@@ -75,11 +75,11 @@ function Footer() {
             <h5 className="footer-heading">Quick Links</h5>
             <ul className="footer-nav-grid mt-4 list-unstyled">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/why-anp">Why ANP</Link></li>
+              <li><Link to="/our-story">Why ANP</Link></li>
               <li><Link to="/who-we-are">Who We Are</Link></li>
               <li><Link to="/what-we-do">What We Do</Link></li>
               <li><Link to="/career">Careers</Link></li>
-              <li><Link to="/contact-us">Contact Us</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
