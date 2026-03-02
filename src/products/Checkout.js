@@ -1,4 +1,8 @@
 import { useState } from "react";
+import {
+  CountrySelect,
+  StateSelect,
+} from "react-country-state-city";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "./CartContext";
 
@@ -6,12 +10,13 @@ function Checkout() {
   const { cartItems, clearCart } = useCart();
   const navigate = useNavigate();
 
+  const [country, setCountry] = useState(null);
+  const [state, setState] = useState(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    country: "",
-    state: "",
     city: "",
     postalCode: "",
   });
@@ -41,7 +46,6 @@ function Checkout() {
     >
       <div className="row">
 
-        {/* LEFT SIDE - FORM */}
         <div className="col-lg-7">
           <div className="card shadow-sm border-0 p-4">
             <h3 className="mb-4">Billing Details</h3>
@@ -59,87 +63,69 @@ function Checkout() {
                 />
               </div>
 
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    className="form-control"
-                    required
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">Phone</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    className="form-control"
-                    required
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-
               <div className="mb-3">
-                <label className="form-label">Country</label>
+                <label>Email</label>
                 <input
-                  type="text"
-                  name="country"
+                  type="email"
+                  name="email"
                   className="form-control"
                   required
                   onChange={handleChange}
                 />
               </div>
 
-              <div className="row">
-                <div className="col-md-4 mb-3">
-                  <label className="form-label">State</label>
-                  <input
-                    type="text"
-                    name="state"
-                    className="form-control"
-                    required
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="col-md-4 mb-3">
-                  <label className="form-label">City</label>
-                  <input
-                    type="text"
-                    name="city"
-                    className="form-control"
-                    required
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="col-md-4 mb-3">
-                  <label className="form-label">Postal Code</label>
-                  <input
-                    type="text"
-                    name="postalCode"
-                    className="form-control"
-                    required
-                    onChange={handleChange}
-                  />
-                </div>
+              <div className="mb-3">
+                <label>Phone</label>
+                <input
+                  type="text"
+                  name="phone"
+                  className="form-control"
+                  required
+                  onChange={handleChange}
+                />
               </div>
 
-              <h5 className="mt-4">Payment Method</h5>
-              <div className="form-check mb-3">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  checked
-                  readOnly
+              {/* COUNTRY */}
+              <div className="mb-3">
+                <label>Country</label>
+                <CountrySelect
+                  onChange={(e) => setCountry(e)}
+                  placeHolder="Select Country"
                 />
-                <label className="form-check-label">
-                  Cash On Delivery
-                </label>
+              </div>
+
+              {/* STATE */}
+              <div className="mb-3">
+                <label>State</label>
+                <StateSelect
+                  countryid={country?.id}
+                  onChange={(e) => setState(e)}
+                  placeHolder="Select State"
+                />
+              </div>
+
+              {/* CITY */}
+              <div className="mb-3">
+                <label>City</label>
+                <input
+                  type="text"
+                  name="city"
+                  className="form-control"
+                  required
+                  onChange={handleChange}
+                />
+              </div>
+
+              {/* POSTAL */}
+              <div className="mb-3">
+                <label>Postal Code</label>
+                <input
+                  type="text"
+                  name="postalCode"
+                  className="form-control"
+                  required
+                  onChange={handleChange}
+                />
               </div>
 
               <button type="submit" className="btn btn-dark w-100 mt-3">
@@ -150,7 +136,7 @@ function Checkout() {
           </div>
         </div>
 
-        {/* RIGHT SIDE - ORDER SUMMARY */}
+        {/* ORDER SUMMARY */}
         <div className="col-lg-5">
           <div className="card shadow-sm border-0 p-4">
             <h4 className="mb-3">Order Summary</h4>

@@ -10,6 +10,7 @@
     "jquery": "^4.0.0",
     "owl.carousel": "^2.3.4",
     "react": "^19.2.4",
+    "react-country-state-city": "^1.1.12",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.13.1",
     "react-scripts": "5.0.1",
