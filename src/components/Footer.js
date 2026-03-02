@@ -63,7 +63,7 @@ function Footer() {
                 <i className="fab fa-linkedin"></i>
               </a>
 
-              <a href="#" className="text-white">
+              <a href="/" className="text-white">
                 <i className="fab fa-twitter"></i>
               </a>
 
