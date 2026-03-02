@@ -99,6 +99,7 @@ function Checkout() {
                 <label>State</label>
                 <StateSelect
                   countryid={country?.id}
+                  value={state}
                   onChange={(e) => setState(e)}
                   placeHolder="Select State"
                 />
