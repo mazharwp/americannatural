@@ -30,7 +30,6 @@ function SingleProduct() {
       >
         <div className="container">
           <div className="row g-4">
-
             {/* LEFT SIDE - IMAGE GALLERY */}
             <div className="col-md-5">
               <div className="mb-3">
